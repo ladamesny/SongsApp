@@ -10,6 +10,15 @@ configure do
   set :password, 'sinatra'
 end
 
+configure :production do 
+  DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/[HEROKU_POSTGRESQL_BLACK_URL]")
+end
+
+configure :development do 
+  DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.db")
+end
+
+
 get '/' do 
   slim :home
 end
