@@ -15,12 +15,7 @@ GEM
     dm-postgres-adapter (1.2.0)
       dm-do-adapter (~> 1.2.0)
       do_postgres (~> 0.10.6)
-    dm-sqlite-adapter (1.2.0)
-      dm-do-adapter (~> 1.2.0)
-      do_sqlite3 (~> 0.10.6)
     do_postgres (0.10.14)
-      data_objects (= 0.10.14)
-    do_sqlite3 (0.10.14)
       data_objects (= 0.10.14)
     eventmachine (1.0.3)
     pg (0.17.1)
@@ -49,7 +44,6 @@ DEPENDENCIES
   dm-core
   dm-migrations
   dm-postgres-adapter
-  dm-sqlite-adapter
   pg
   sass
   sinatra
